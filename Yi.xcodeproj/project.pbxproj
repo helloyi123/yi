@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B15AB4A71BDB330300FCFB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AB4A61BDB330300FCFB83 /* main.m */; };
+		B15AB4AA1BDB330300FCFB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AB4A91BDB330300FCFB83 /* AppDelegate.m */; };
+		B15AB4AD1BDB330300FCFB83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AB4AC1BDB330300FCFB83 /* ViewController.m */; };
+		B15AB4B01BDB330300FCFB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15AB4AE1BDB330300FCFB83 /* Main.storyboard */; };
+		B15AB4B21BDB330300FCFB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15AB4B11BDB330300FCFB83 /* Assets.xcassets */; };
+		B15AB4B51BDB330300FCFB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15AB4B31BDB330300FCFB83 /* LaunchScreen.storyboard */; };
+		B15AB4C01BDB330300FCFB83 /* YiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AB4BF1BDB330300FCFB83 /* YiTests.m */; };
+		B15AB4CB1BDB330300FCFB83 /* YiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AB4CA1BDB330300FCFB83 /* YiUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B15AB4BC1BDB330300FCFB83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B15AB49A1BDB330300FCFB83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B15AB4A11BDB330300FCFB83;
+			remoteInfo = Yi;
+		};
+		B15AB4C71BDB330300FCFB83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B15AB49A1BDB330300FCFB83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B15AB4A11BDB330300FCFB83;
+			remoteInfo = Yi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B15AB4A21BDB330300FCFB83 /* Yi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15AB4A61BDB330300FCFB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B15AB4A81BDB330300FCFB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B15AB4A91BDB330300FCFB83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B15AB4AB1BDB330300FCFB83 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B15AB4AC1BDB330300FCFB83 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B15AB4AF1BDB330300FCFB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B15AB4B11BDB330300FCFB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B15AB4B41BDB330300FCFB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B15AB4B61BDB330300FCFB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B15AB4BB1BDB330300FCFB83 /* YiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15AB4BF1BDB330300FCFB83 /* YiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YiTests.m; sourceTree = "<group>"; };
+		B15AB4C11BDB330300FCFB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B15AB4C61BDB330300FCFB83 /* YiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15AB4CA1BDB330300FCFB83 /* YiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YiUITests.m; sourceTree = "<group>"; };
+		B15AB4CC1BDB330300FCFB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B15AB49F1BDB330300FCFB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15AB4B81BDB330300FCFB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15AB4C31BDB330300FCFB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B15AB4991BDB330300FCFB83 = {
+			isa = PBXGroup;
+			children = (
+				B15AB4A41BDB330300FCFB83 /* Yi */,
+				B15AB4BE1BDB330300FCFB83 /* YiTests */,
+				B15AB4C91BDB330300FCFB83 /* YiUITests */,
+				B15AB4A31BDB330300FCFB83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B15AB4A31BDB330300FCFB83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B15AB4A21BDB330300FCFB83 /* Yi.app */,
+				B15AB4BB1BDB330300FCFB83 /* YiTests.xctest */,
+				B15AB4C61BDB330300FCFB83 /* YiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B15AB4A41BDB330300FCFB83 /* Yi */ = {
+			isa = PBXGroup;
+			children = (
+				B15AB4A81BDB330300FCFB83 /* AppDelegate.h */,
+				B15AB4A91BDB330300FCFB83 /* AppDelegate.m */,
+				B15AB4AB1BDB330300FCFB83 /* ViewController.h */,
+				B15AB4AC1BDB330300FCFB83 /* ViewController.m */,
+				B15AB4AE1BDB330300FCFB83 /* Main.storyboard */,
+				B15AB4B11BDB330300FCFB83 /* Assets.xcassets */,
+				B15AB4B31BDB330300FCFB83 /* LaunchScreen.storyboard */,
+				B15AB4B61BDB330300FCFB83 /* Info.plist */,
+				B15AB4A51BDB330300FCFB83 /* Supporting Files */,
+			);
+			path = Yi;
+			sourceTree = "<group>";
+		};
+		B15AB4A51BDB330300FCFB83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B15AB4A61BDB330300FCFB83 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B15AB4BE1BDB330300FCFB83 /* YiTests */ = {
+			isa = PBXGroup;
+			children = (
+				B15AB4BF1BDB330300FCFB83 /* YiTests.m */,
+				B15AB4C11BDB330300FCFB83 /* Info.plist */,
+			);
+			path = YiTests;
+			sourceTree = "<group>";
+		};
+		B15AB4C91BDB330300FCFB83 /* YiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B15AB4CA1BDB330300FCFB83 /* YiUITests.m */,
+				B15AB4CC1BDB330300FCFB83 /* Info.plist */,
+			);
+			path = YiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B15AB4A11BDB330300FCFB83 /* Yi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B15AB4CF1BDB330300FCFB83 /* Build configuration list for PBXNativeTarget "Yi" */;
+			buildPhases = (
+				B15AB49E1BDB330300FCFB83 /* Sources */,
+				B15AB49F1BDB330300FCFB83 /* Frameworks */,
+				B15AB4A01BDB330300FCFB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yi;
+			productName = Yi;
+			productReference = B15AB4A21BDB330300FCFB83 /* Yi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B15AB4BA1BDB330300FCFB83 /* YiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B15AB4D21BDB330300FCFB83 /* Build configuration list for PBXNativeTarget "YiTests" */;
+			buildPhases = (
+				B15AB4B71BDB330300FCFB83 /* Sources */,
+				B15AB4B81BDB330300FCFB83 /* Frameworks */,
+				B15AB4B91BDB330300FCFB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B15AB4BD1BDB330300FCFB83 /* PBXTargetDependency */,
+			);
+			name = YiTests;
+			productName = YiTests;
+			productReference = B15AB4BB1BDB330300FCFB83 /* YiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B15AB4C51BDB330300FCFB83 /* YiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B15AB4D51BDB330300FCFB83 /* Build configuration list for PBXNativeTarget "YiUITests" */;
+			buildPhases = (
+				B15AB4C21BDB330300FCFB83 /* Sources */,
+				B15AB4C31BDB330300FCFB83 /* Frameworks */,
+				B15AB4C41BDB330300FCFB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B15AB4C81BDB330300FCFB83 /* PBXTargetDependency */,
+			);
+			name = YiUITests;
+			productName = YiUITests;
+			productReference = B15AB4C61BDB330300FCFB83 /* YiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B15AB49A1BDB330300FCFB83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = sunkai;
+				TargetAttributes = {
+					B15AB4A11BDB330300FCFB83 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B15AB4BA1BDB330300FCFB83 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B15AB4A11BDB330300FCFB83;
+					};
+					B15AB4C51BDB330300FCFB83 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B15AB4A11BDB330300FCFB83;
+					};
+				};
+			};
+			buildConfigurationList = B15AB49D1BDB330300FCFB83 /* Build configuration list for PBXProject "Yi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B15AB4991BDB330300FCFB83;
+			productRefGroup = B15AB4A31BDB330300FCFB83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B15AB4A11BDB330300FCFB83 /* Yi */,
+				B15AB4BA1BDB330300FCFB83 /* YiTests */,
+				B15AB4C51BDB330300FCFB83 /* YiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B15AB4A01BDB330300FCFB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B15AB4B51BDB330300FCFB83 /* LaunchScreen.storyboard in Resources */,
+				B15AB4B21BDB330300FCFB83 /* Assets.xcassets in Resources */,
+				B15AB4B01BDB330300FCFB83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15AB4B91BDB330300FCFB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15AB4C41BDB330300FCFB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B15AB49E1BDB330300FCFB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B15AB4AD1BDB330300FCFB83 /* ViewController.m in Sources */,
+				B15AB4AA1BDB330300FCFB83 /* AppDelegate.m in Sources */,
+				B15AB4A71BDB330300FCFB83 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15AB4B71BDB330300FCFB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B15AB4C01BDB330300FCFB83 /* YiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15AB4C21BDB330300FCFB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B15AB4CB1BDB330300FCFB83 /* YiUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B15AB4BD1BDB330300FCFB83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B15AB4A11BDB330300FCFB83 /* Yi */;
+			targetProxy = B15AB4BC1BDB330300FCFB83 /* PBXContainerItemProxy */;
+		};
+		B15AB4C81BDB330300FCFB83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B15AB4A11BDB330300FCFB83 /* Yi */;
+			targetProxy = B15AB4C71BDB330300FCFB83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B15AB4AE1BDB330300FCFB83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B15AB4AF1BDB330300FCFB83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B15AB4B31BDB330300FCFB83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B15AB4B41BDB330300FCFB83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B15AB4CD1BDB330300FCFB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B15AB4CE1BDB330300FCFB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B15AB4D01BDB330300FCFB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Yi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kai-Sun.Yi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B15AB4D11BDB330300FCFB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Yi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kai-Sun.Yi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B15AB4D31BDB330300FCFB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kai-Sun.YiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yi.app/Yi";
+			};
+			name = Debug;
+		};
+		B15AB4D41BDB330300FCFB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kai-Sun.YiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yi.app/Yi";
+			};
+			name = Release;
+		};
+		B15AB4D61BDB330300FCFB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kai-Sun.YiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Yi;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B15AB4D71BDB330300FCFB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Kai-Sun.YiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Yi;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B15AB49D1BDB330300FCFB83 /* Build configuration list for PBXProject "Yi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B15AB4CD1BDB330300FCFB83 /* Debug */,
+				B15AB4CE1BDB330300FCFB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B15AB4CF1BDB330300FCFB83 /* Build configuration list for PBXNativeTarget "Yi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B15AB4D01BDB330300FCFB83 /* Debug */,
+				B15AB4D11BDB330300FCFB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B15AB4D21BDB330300FCFB83 /* Build configuration list for PBXNativeTarget "YiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B15AB4D31BDB330300FCFB83 /* Debug */,
+				B15AB4D41BDB330300FCFB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B15AB4D51BDB330300FCFB83 /* Build configuration list for PBXNativeTarget "YiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B15AB4D61BDB330300FCFB83 /* Debug */,
+				B15AB4D71BDB330300FCFB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B15AB49A1BDB330300FCFB83 /* Project object */;
+}
