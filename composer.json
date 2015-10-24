@@ -1,10 +1,5 @@
 {
     "require": {
         "bephp/micro": "^1.0"
-    },
-    "require-dev":{
-        "bephp/request": "*",
-        "satooshi/php-coveralls": "*",
-        "phpunit/phpunit": "*"
     }
 }

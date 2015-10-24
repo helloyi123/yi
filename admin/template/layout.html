@@ -54,6 +54,9 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <ul tal:condition="session('username')" class="nav navbar-nav navbar-right">
+            <li><a href="/logout" tal:content="session('username')"></a></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
