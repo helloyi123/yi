@@ -39,6 +39,24 @@ class WordWidget extends Widget{
     }
 }
 
+class DescriptionWidget extends Widget{
+    public function run(){
+        $this->template = 'description.html';
+        $this->header = 'Manage Description';
+        $this->words = (new Word)->orderby('id desc')->findAll();
+        $this->descs = (new Description)->orderby('id desc')->findAll();
+    }
+}
+
+class CommentWidget extends Widget{
+    public function run(){
+        $this->template = 'comment.html';
+        $this->header = 'Manage Comment';
+        $this->comments = (new Comment)->orderby('id desc')->findAll();
+        $this->descs = (new Description)->orderby('id desc')->findAll();
+    }
+}
+
 class CategoryWidget extends Widget{
     public function run(){
         $this->template = 'category.html';
@@ -63,7 +81,7 @@ class Admin extends BaseController{
         $this->render('test.html');
     }
     public function user(){
-        $this->render('layout.html', array('content'=>new UserWidget));
+        $this->render('content.html', array('content'=>new UserWidget));
     }
     public function createuser($name, $passwd, $profile, $router){
         $user = new User(array('name'=>$name, 'atime'=>$time=time(), 'passwd'=>md5($passwd. $time), 'profile'=>$profile));
@@ -71,7 +89,7 @@ class Admin extends BaseController{
         $router->error(301, '/user');
     }
     public function word(){
-        $this->render('layout.html', array('content'=>new WordWidget));
+        $this->render('content.html', array('content'=>new WordWidget));
     }
     public function createword($name, $uid, $cid, $router){
         $word = new Word(array('name'=>$name, 'uid'=>$uid, 'cid'=>$cid, 'atime'=>$time=time(), 'descs'=>0));
@@ -79,7 +97,7 @@ class Admin extends BaseController{
         $router->error(301, '/word');
     }
     public function category(){
-        $this->render('layout.html', array('content'=>new CategoryWidget));
+        $this->render('content.html', array('content'=>new CategoryWidget));
     }
     public function createcategory($name, $router){
         $word = new Category(array('name'=>$name, 'atime'=>$time=time(), 'num'=>0));
@@ -87,7 +105,7 @@ class Admin extends BaseController{
         $router->error(301, '/category');
     }
     public function banner(){
-        $this->render('layout.html', array('content'=>new BannerWidget));
+        $this->render('content.html', array('content'=>new BannerWidget));
     }
     public function createbanner($wid, $image, $router){
         $img = new Image();
@@ -97,6 +115,29 @@ class Admin extends BaseController{
         $banner = new Banner(array('wid'=>$wid, 'imgid'=>$img->id, 'atime'=>$time=time(), 'status'=>1));
         $banner->insert();
         $router->error(301, '/banner');
+    }
+    public function comment(){
+        $this->render('content.html', array('content'=>new CommentWidget));
+    }
+    public function createcomment($did, $uid, $content, $router){
+        $comment = new Comment(array('did'=>$did, 'uid'=>$uid, 'atime'=>$time=time(), 'content'=>$content));
+        $comment->insert();
+        $router->error(301, '/comment');
+    }
+    public function description(){
+        $this->render('content.html', array('content'=>new DescriptionWidget));
+    }
+    public function createdescription($wid, $uid, $content, $images, $router){
+        $description = new Description(array('wid'=>$wid, 'uid'=>$uid, 'atime'=>$time=time(), 'up'=>0, 'down'=>0, 'share'=>0, 'content'=>$content));
+        $description->insert();
+        foreach ($images['tmp_name'] as $i => $name){
+             $img = new Image();
+             $img->content = file_get_contents($name);
+             $img->atime = time();
+             $img->did = $description->id;
+             $img->insert();
+        }
+        $router->error(301, '/desc');
     }
     public function img($id){
         $img = (new Image);
@@ -133,4 +174,8 @@ $admin = new Admin;
 ->post('/category', array($admin, 'createcategory'))
 ->get('/banner', array($admin, 'banner'))
 ->post('/banner', array($admin, 'createbanner'))
+->get('/comment', array($admin, 'comment'))
+->post('/comment', array($admin, 'createcomment'))
+->get('/desc', array($admin, 'description'))
+->post('/desc', array($admin, 'createdescription'))
 ->execute();

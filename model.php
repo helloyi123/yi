@@ -42,15 +42,7 @@ class Banner extends ActiveRecord{
 class Comment extends ActiveRecord{
     public $table = 'comment';
     public $relations = array(
-        'descs' => array(self::BELONGS_TO, 'Description', 'did'),
-        'user' => array(self::BELONGS_TO, 'User', 'uid')
-    );
-}
-
-class Description extends ActiveRecord{
-    public $table = 'description';
-    public $relations = array(
-        'world' => array(self::BELONGS_TO, 'World', 'wid'),
+        'desc' => array(self::BELONGS_TO, 'Description', 'did'),
         'user' => array(self::BELONGS_TO, 'User', 'uid')
     );
 }
@@ -60,5 +52,17 @@ class Image extends ActiveRecord{
     public $relations = array(
         'desc' => array(self::BELONGS_TO, 'Description', 'did'),
     );
+}
+
+class Description extends ActiveRecord{
+    public $table = 'description';
+    public $relations = array(
+        'word' => array(self::BELONGS_TO, 'Word', 'wid'),
+        'user' => array(self::BELONGS_TO, 'User', 'uid'),
+        'images' => array(self::HAS_MANY, 'Image', 'did'),
+    );
+    public function imagehtml(){
+        return implode(', ', array_map(function($i){ return '<img style="max-width:100px;max-height:100px;" src="/img/'. $i->id. '">'; }, $this->images));
+    }
 }
 
