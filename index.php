@@ -57,4 +57,20 @@ class Api extends Base{
         'word' => array_map(function($w){ return array('id' => $w->id, 'name' => $w->name); }, $word)
     );
 })
+->get('/word/:id', function($id){
+    $desc = (new Description)->eq('wid', $id)->orderby('id desc')->findAll();
+    return array(
+        'desc' => array_map(function($w){
+            return array('id' => $w->id, 'content' => $w->content, 'image' => array_map(function($i){
+                return $i->imgurl(true);
+            }, $w->images));
+        }, $desc)
+    );
+})
+->get('/desc/:id', function($id){
+    $comments = (new Comment)->eq('did', $id)->orderby('id desc')->findAll();
+    return array(
+        'comment' => array_map(function($w){ return array('id' => $w->id, 'content' => $w->content); }, $comments)
+    );
+})
 ->execute();
