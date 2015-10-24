@@ -1,0 +1,32 @@
+<div>
+      <h2>Create Banner</h2>
+      <form class="navbar-form navbar-left" enctype="multipart/form-data" role="search" method="POST">
+        <div class="form-group">
+          <select name="wid" class="form-control">
+            <option tal:repeat="$words as $word" tal:content="$word->name" tal:value="$word->id"></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="file" name="image" class="form-control" placeholder="name" />
+        </div>
+        <button type="submit" class="btn btn-default">Create</button>
+      </form>
+       <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>word</th>
+            <th>image</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="$banners as $banner">
+            <th tal:content="$banner->id" scope="row">1</th>
+            <td tal:content="$banner->word->name">Mark</td>
+            <td><img style="max-width:100px;max-height:100px" tal:src="$banner->imgurl()" /></td>
+            <td tal:content="date('Y-m-d', $banner->atime)">@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

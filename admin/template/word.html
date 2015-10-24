@@ -1,0 +1,33 @@
+<div>
+      <h2>Create Word</h2>
+      <form class="navbar-form navbar-left" role="search" method="POST">
+        <div class="form-group">
+          <input type="hidden" name="uid" class="form-control" value="1"/>
+          <input type="text" name="name" class="form-control" placeholder="name" />
+        </div>
+        <div class="form-group">
+          <select name="cid" class="form-control">
+            <option tal:repeat="$categories as $category" tal:content="$category->name" tal:value="$category->id"></option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">Create</button>
+      </form>
+       <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>category</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="$words as $word">
+            <th tal:content="$word->id" scope="row">1</th>
+            <td tal:content="$word->name">Mark</td>
+            <td tal:content="$word->cate">Otto</td>
+            <td tal:content="date('Y-m-d', $word->atime)">@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
