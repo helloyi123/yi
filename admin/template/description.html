@@ -2,7 +2,7 @@
       <h2>Create Description</h2>
       <form enctype="multipart/form-data" class="navbar-form navbar-left" role="search" method="POST">
         <div class="form-group">
-          <input type="hidden" name="uid" class="form-control" placeholder="uid" value="1"/>
+          <input type="hidden" name="uid" class="form-control" placeholder="uid" tal:value="session('userid')" value="1"/>
           <input type="text" name="content" class="form-control" placeholder="content" />
         </div>
         <div class="form-group">
