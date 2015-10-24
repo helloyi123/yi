@@ -20,7 +20,7 @@
             <th tal:content="$category->id" scope="row">1</th>
             <td tal:content="$category->name">Mark</td>
             <td tal:content="date('Y-m-d', $category->atime)">@mdo</td>
-            <td><a tal:href="'/category/delete/'. $category->id">DELETE</a></td>
+            <td><a tal:href="'/delete/category/'. $category->id">DELETE</a></td>
           </tr>
         </tbody>
       </table>
