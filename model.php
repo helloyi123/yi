@@ -52,6 +52,9 @@ class Image extends ActiveRecord{
     public $relations = array(
         'desc' => array(self::BELONGS_TO, 'Description', 'did'),
     );
+    public function imgurl($full=false){
+        return ($full?'http://'.$_SERVER['HTTP_HOST']:'').  '/img/'. $this->id;
+    }
 }
 
 class Description extends ActiveRecord{
