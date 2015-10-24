@@ -33,6 +33,7 @@
             <td tal:content="$message->message">Mark</td>
             <td tal:content="$message->type">Otto</td>
             <td tal:content="date('Y-m-d', $message->atime)">@mdo</td>
+            <td><a tal:href="'/delete/message/'. $message->id">DELETE</a></td>
           </tr>
         </tbody>
       </table>
