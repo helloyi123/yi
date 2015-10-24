@@ -1,15 +1,24 @@
 <div>
       <h2>Create User</h2>
-      <form class="navbar-form navbar-left" role="search" method="POST">
+      <form enctype="multipart/form-data" class="navbar-form navbar-left" role="search" method="POST">
         <div class="form-group">
-          <input type="text" name="name" class="form-control" placeholder="name" />
+          <input type="hidden" name="uid" class="form-control" placeholder="uid" value="1"/>
+          <input type="text" name="content" class="form-control" placeholder="content" />
         </div>
         <div class="form-group">
-          <input type="password" name="passwd" class="form-control" placeholder="passwd" />
+          <select name="wid" class="form-control">
+            <option tal:repeat="$words as $word" tal:content="$word->name" tal:value="$word->id"></option>
+          </select>
         </div>
-        <div class="form-group">
-          <input type="text" name="profile" class="form-control" placeholder="profile" />
+        <div class="desc-file form-group">
+          <input type="file" name="images[]" class="form-control" placeholder="image" />
         </div>
+        <script type="text/riot" id="desc-file">
+        <div class="desc-file form-group">
+          <input type="file" name="images[]" class="form-control" placeholder="image" />
+        </div>
+        </script>
+        <button id="add-file" type="button" class="btn btn-default">Add File</button>
         <button type="submit" class="btn btn-default">Create</button>
       </form>
        <table class="table">
@@ -17,16 +26,26 @@
           <tr>
             <th>#</th>
             <th>Username</th>
-            <th>Profile</th>
+            <th>Word</th>
+            <th>Content</th>
+            <th>Images</th>
+            <th>up</th>
+            <th>down</th>
+            <th>share</th>
             <th>Time</th>
           </tr>
         </thead>
         <tbody>
-          <tr tal:repeat="$users as $user">
-            <th tal:content="$user->id" scope="row">1</th>
-            <td tal:content="$user->name">Mark</td>
-            <td tal:content="$user->profile">Otto</td>
-            <td tal:content="date('Y-m-d', $user->atime)">@mdo</td>
+          <tr tal:repeat="$descs as $desc" >
+            <th tal:content="$desc->id" scope="row">1</th>
+            <td tal:content="$desc->user->name">Mark</td>
+            <td tal:content="$desc->word->name">Otto</td>
+            <td tal:content="$desc->content">Otto</td>
+            <td tal:content="$desc->imagehtml()">Otto</td>
+            <td tal:content="$desc->up">Otto</td>
+            <td tal:content="$desc->down">Otto</td>
+            <td tal:content="$desc->share">Otto</td>
+            <td tal:content="date('Y-m-d', $desc->atime)">@mdo</td>
           </tr>
         </tbody>
       </table>
