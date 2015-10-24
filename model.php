@@ -12,6 +12,13 @@ class User extends ActiveRecord{
     );
 }
 
+class Message extends ActiveRecord{
+    public $table = 'message';
+    public $relations = array(
+        'user' => array(self::BELONGS_TO, 'User', 'uid'),
+    );
+}
+
 class Category extends ActiveRecord{
     public $table = 'category';
     public $relations = array(
