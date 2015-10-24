@@ -69,7 +69,7 @@ class Api extends Base{
     );
 })
 ->get('/search/:name', function($name, $skip=0, $limit=10){
-    $word = (new Word)->like('name', '%'. $name. '%')->orderby('id desc')->limit($skip, $limit)->findAll();
+    $word = (new Word)->like('name', '%'. urldecode($name). '%')->orderby('id desc')->limit($skip, $limit)->findAll();
     return array(
         'word' => array_map(function($w){ return array('id' => $w->id, 'name' => $w->name); }, $word)
     );
