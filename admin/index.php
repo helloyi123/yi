@@ -74,6 +74,14 @@ class BannerWidget extends Widget{
     }
 }
 
+class MessageWidget extends Widget{
+    public function run(){
+        $this->template = 'message.html';
+        $this->header = 'Manage Message';
+        $this->messages = (new Message)->orderby('id desc')->findAll();
+    }
+}
+
 
 
 class Admin extends BaseController{
@@ -139,6 +147,14 @@ class Admin extends BaseController{
         }
         $router->error(301, '/desc');
     }
+    public function message(){
+        $this->render('content.html', array('content'=>new MessageWidget));
+    }
+    public function createmessage($type, $uid, $message, $router){
+        $message = new Message(array('type'=>$type, 'uid'=>$uid, 'atime'=>$time=time(), 'message'=>$message));
+        $message->insert();
+        $router->error(301, '/message');
+    }
     public function img($id){
         $img = (new Image);
         header('Content-type:image/png');
@@ -178,4 +194,6 @@ $admin = new Admin;
 ->post('/comment', array($admin, 'createcomment'))
 ->get('/desc', array($admin, 'description'))
 ->post('/desc', array($admin, 'createdescription'))
+->get('/message', array($admin, 'message'))
+->post('/message', array($admin, 'createmessage'))
 ->execute();

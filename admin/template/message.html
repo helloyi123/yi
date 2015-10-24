@@ -1,0 +1,39 @@
+<div>
+      <h2>Create Message</h2>
+      <form class="navbar-form navbar-left" role="search" method="POST">
+        <div class="form-group">
+          <input type="hidden" name="uid" class="form-control" value="1" />
+          <input type="text" name="message" class="form-control" placeholder="message" />
+        </div>
+        <div class="form-group">
+          <select name="type" class="form-control">
+            <option value="1">word (add desc)</option>
+            <option value="2">desc (add comment)</option>
+            <option value="3">up desc</option>
+            <option value="4">down desc</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">Create</button>
+      </form>
+       <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>message</th>
+            <th>type</th>
+            <th>Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="$messages as $message">
+            <th tal:content="$message->id" scope="row">1</th>
+            <th tal:content="$message->user->name" scope="row">1</th>
+            <td tal:content="$message->message">Mark</td>
+            <td tal:content="$message->type">Otto</td>
+            <td tal:content="date('Y-m-d', $message->atime)">@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

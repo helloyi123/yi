@@ -51,6 +51,15 @@ class Api extends Base{
         'word' => array_map(function($w){ return array('id' => $w->id, 'name' => $w->name); }, $word)
     );
 })
+->get('/user/:id/message/:type', function($id, $type, $skip=0, $limit=10){
+    $types = array('word'=>1, 'desc'=>2, 'up' => 3, 'down' => 4);
+    $type = $types[$type];
+    $messages = (new Message)->eq('uid', $id)->eq('type', isset($types[$type]) ? $types[$type] : 1)
+        ->orderby('id desc')->limit($skip, $limit)->findAll();
+    return array(
+        'message' => array_map(function($w){ return array('id' => $w->id, 'message' => $w->message); }, $messages)
+    );
+})
 ->get('/search/:name', function($name, $skip=0, $limit=10){
     $word = (new Word)->like('name', '%'. $name. '%')->orderby('id desc')->limit($skip, $limit)->findAll();
     return array(
