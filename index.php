@@ -51,7 +51,7 @@ class Api extends Base{
 ->get('/user/:id/desc', function($id, $skip=0, $limit=10){
     $descs = (new Description)->eq('uid', $id)->orderby('id desc')->limit($skip, $limit)->findAll();
     return array(
-        'desc' => array_map(function($w){ return array('id' => $w->id, 'name' => $w->content); }, $descs)
+        'desc' => array_map(function($w){ return array('id' => $w->id, 'name' => $w->content, 'up'=>$w->up, 'down'=>$w->down); }, $descs)
     );
 })
 ->get('/user/:id/word', function($id, $skip=0, $limit=10){
