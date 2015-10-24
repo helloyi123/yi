@@ -1,6 +1,7 @@
 <?php 
 
 include "../model.php";
+
 MicroTpl::$debug = true;
 // controllers
 /* extends ActiveRecord.php Base class*/
@@ -167,14 +168,34 @@ class Admin extends BaseController{
         $data->delete();
         die('<script>history.back();</script>');
     }
+    public function logout($router){
+        session_destroy();
+        $router->error(301, '/login');
+    }
+    public function login($router, $name='', $passwd=''){
+        if ($name && $passwd){
+            $user = (new User)->eq('name', $name)->find();
+            if ($user && $user->passwd == md5($passwd. $user->atime)){
+                session('userid', $user->id);
+                session('username', $name);
+                $router->error(301, '/word');
+            }
+        }
+        $this->render('login.html');
+    }
 }
 
 $admin = new Admin;
 
 (new Router())
-->error(301, function($path, $message=''){
-    header('Location: '. $path, 301);
+->error(301, function($path, $message='', $code=301){
+    header('Location: '. $path, $code);
     die($message);
+})
+->hook('before', function($params){
+    if (!session('username') && !preg_match('@login@', $params['REQUEST_URI']) )
+        $params['router']->error(301, '/login');
+    return $params;
 })
 ->hook('after', function($result, $router){
     if($result) echo json_encode($result);
@@ -196,4 +217,7 @@ $admin = new Admin;
 ->post('/desc', array($admin, 'createdescription'))
 ->get('/message', array($admin, 'message'))
 ->post('/message', array($admin, 'createmessage'))
+->get('/logout', array($admin, 'logout'))
+->get('/login', array($admin, 'login'))
+->post('/login', array($admin, 'login'))
 ->execute();
