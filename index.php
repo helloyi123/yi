@@ -29,10 +29,10 @@ class Api extends Base{
     echo $img->find($id)->content;
 })
 ->get('/homepage', function(){
-    $banner = (new Banner)->eq('status', 1)->orderby('id desc')->find();
+    $banner = (new Banner)->eq('status', 1)->orderby('id desc')->limit(3)->findAll();
     $categories = (new Category)->orderby('id desc')->limit(5)->findAll();
     return array(
-        'banner' => array('id' => $banner->id, 'img' => $banner->imgurl(true)),
+        'banners' => array_map(function($b){ return array('id' => $b->id, 'img' => $b->imgurl(true)); }, $banner),
         'categories' => array_map(function($c){ return array('id'=>$c->id, 'name'=>$c->name);}, $categories) ,
     );
 })
