@@ -18,6 +18,7 @@
             <th>word</th>
             <th>image</th>
             <th>Time</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +27,7 @@
             <td tal:content="$banner->word->name">Mark</td>
             <td><img style="max-width:100px;max-height:100px" tal:src="$banner->imgurl()" /></td>
             <td tal:content="date('Y-m-d', $banner->atime)">@mdo</td>
+            <td><a tal:href="'/banner/delete/'. $banner->id">DELETE</a></td>
           </tr>
         </tbody>
       </table>

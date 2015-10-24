@@ -103,6 +103,13 @@ class Admin extends BaseController{
         header('Content-type:image/png');
         echo $img->eq('id', $id)->find()->content;
     }
+    public function delete($name, $id){
+        $name = ucfirst($name);
+        $data = new $name;
+        $data->id = $id;
+        $data->delete();
+        die('<script>history.back();</script>');
+    }
 }
 
 $admin = new Admin;
@@ -116,6 +123,7 @@ $admin = new Admin;
     if($result) echo json_encode($result);
 })
 ->get('/', array($admin, 'test'))
+->get('/delete/:name/:id', array($admin, 'delete'))
 ->get('/img/:id', array($admin, 'img'))
 ->get('/user', array($admin, 'user'))
 ->post('/user', array($admin, 'createuser'))

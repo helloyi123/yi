@@ -19,14 +19,16 @@
             <th>name</th>
             <th>category</th>
             <th>Time</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr tal:repeat="$words as $word">
             <th tal:content="$word->id" scope="row">1</th>
             <td tal:content="$word->name">Mark</td>
-            <td tal:content="$word->cate">Otto</td>
+            <td tal:content="$word->category->name">Otto</td>
             <td tal:content="date('Y-m-d', $word->atime)">@mdo</td>
+            <td><a tal:href="'/delete/word/'. $word->id">DELETE</a></td>
           </tr>
         </tbody>
       </table>

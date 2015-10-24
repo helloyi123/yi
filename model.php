@@ -31,7 +31,7 @@ class Word extends ActiveRecord{
 class Banner extends ActiveRecord{
     public $table = 'banner';
     public $relations = array(
-        'word' => array(self::BELONGS_TO, 'Word', 'cid'),
+        'word' => array(self::BELONGS_TO, 'Word', 'wid'),
         'image' => array(self::BELONGS_TO, 'Image', 'imgid'),
     );
     public function imgurl($full=false){
