@@ -33,6 +33,7 @@
             <th>down</th>
             <th>share</th>
             <th>Time</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@
             <td tal:content="$desc->down">Otto</td>
             <td tal:content="$desc->share">Otto</td>
             <td tal:content="date('Y-m-d', $desc->atime)">@mdo</td>
+            <td><a tal:href="'/delete/description/'. $desc->id">DELETE</a></td>
           </tr>
         </tbody>
       </table>

@@ -30,6 +30,7 @@
             <td tal:content="$comment->desc->content">Mark</td>
             <td tal:content="$comment->content">Otto</td>
             <td tal:content="date('Y-m-d', $comment->atime)">@mdo</td>
+            <td><a tal:href="'/delete/comment/'. $comment->id">DELETE</a></td>
           </tr>
         </tbody>
       </table>
