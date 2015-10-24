@@ -2,7 +2,7 @@
 
 include "vendor/autoload.php";
 // models 
-ActiveRecord::setDb(new PDO('mysql:host=127.0.0.1;dbname=yi', 'root', '123456'));
+ActiveRecord::setDb(new PDO('mysql:host=127.0.0.1;dbname=yi', 'root', 'helloyi1024'));
 class User extends ActiveRecord{
     public $table = 'user';
     public $relations = array(
