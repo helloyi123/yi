@@ -16,8 +16,8 @@ class Api extends Base{
     die($message);
 })
 ->hook('auth', function($params){
-    if (!session('username'))
-        $params['router']->error(301, '/login');
+//    if (!session('username'))
+//        $params['router']->error(301, '/login');
     return $params;
 })
 ->hook('after', function($result, $router){
@@ -108,7 +108,7 @@ class Api extends Base{
 ->post('/word/create', function($name, $uid, $cid, $router){
     $word = new Word(array('name'=>$name, 'uid'=>$uid, 'cid'=>$cid, 'atime'=>$time=time(), 'descs'=>0));
     $word->insert();
-    return array('id' => $word->id);
+    return array('id' => (int)($word->id));
 }, 'auth')
 ->post('/comment/create', function($did, $uid, $content, $router){
     $comment = new Comment(array('did'=>$did, 'uid'=>$uid, 'atime'=>$time=time(), 'content'=>$content));
@@ -118,7 +118,7 @@ class Api extends Base{
     $message->message = '你的描述被评论了';
     $message->type = 2;
     $message->insert();
-    return array('id' => $comment->id);
+    return array('id' => (int)($comment->id));
 }, 'auth')
 ->post('/desc/create', function($wid, $uid, $content, $images, $router){
     $description = new Description(array('wid'=>$wid, 'uid'=>$uid, 'atime'=>$time=time(), 'up'=>0, 'down'=>0, 'share'=>0, 'content'=>$content));
@@ -135,7 +135,7 @@ class Api extends Base{
     $message->message = '你的词条添加了新的描述';
     $message->type = 1;
     $message->insert();
-    return array('id' => $description->id);
+    return array('id' => (int)($description->id));
 }, 'auth')
 ->post('/desc/:did/:action', function($did, $uid, $action){
     $desc = new Description;
