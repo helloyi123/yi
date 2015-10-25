@@ -44,7 +44,7 @@
 
 ## 技术实现
 
-### 服务端
+### 服务端(on branch server)
 
 #### 架构
 Mysql + PHP + NGINX
@@ -61,9 +61,20 @@ Mysql + PHP + NGINX
 
 
 
-### 客户端
+### 客户端 (on branch master)
 
 #### IOS 
+
+##### 开发环境
+1. Xcode 7.0
+2. iOS SDK 9.0
+
+##### 第三方库
+1. ShareSDK
+
+##### 技术细节
+1. NSJSONSerilzation序列化数据
+2. NSURLSession网络访问
 
 ## 团队成员
 
@@ -71,7 +82,7 @@ Mysql + PHP + NGINX
 * [Lloyd Zhou](https://github.com/lloydzhou)
 * black su
 * [talisk](http://blog.talisk.cn/)
-* 
+* zhen han
 
 ## 产品预览
 
