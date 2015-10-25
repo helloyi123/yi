@@ -2,7 +2,7 @@
 用户可以自行上传一个新词并为之释义，其他用户同样可以自由的为之释义，为其创造新的释义。
 更为简易，更为详细，更加从多角度来释义。
 
-## 产品构思，应用场景与市场规模介绍
+## 项目描述
 
 
 ### 产品构思：
@@ -64,4 +64,14 @@ Mysql + PHP + NGINX
 ### 客户端
 
 #### IOS 
+
+## 团队成员
+
+* ken zhou
+* [Lloyd Zhou](https://github.com/lloydzhou)
+* black su
+* [talisk](http://blog.talisk.cn/)
+* 
+
+## 产品预览
 
